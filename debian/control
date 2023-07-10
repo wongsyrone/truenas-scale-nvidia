@@ -1,0 +1,14 @@
+Source: nvidia-kernel
+Section: non-free/kernel
+Priority: optional
+Maintainer: Vladimir Vinogradenko <vladimirv@ixsystems.com>
+Build-Depends: debhelper-compat (= 12), nvidia-kernel-dkms (= @VERSION@)
+Homepage: https://www.nvidia.com
+
+Package: nvidia-kernel
+Architecture: amd64
+Provides: nvidia-kernel-@VERSION_SHORT@
+Pre-Depends: nvidia-installer-cleanup
+Description: NVIDIA binary kernel module DKMS source
+ This package contains the NVIDIA Xorg binary kernel module needed by
+ nvidia-driver, pre-built using DKMS.

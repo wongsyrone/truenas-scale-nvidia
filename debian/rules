@@ -1,0 +1,10 @@
+#!/usr/bin/make -f
+export DH_VERBOSE = 1
+
+%:
+	dh $@
+
+override_dh_install:
+	dh_install
+	mkdir -p "debian/nvidia-kernel/lib/modules/@KERNEL_VERSION@/updates/dkms"
+	cp "/lib/modules/@KERNEL_VERSION@/updates/dkms/"nvidia-* "debian/nvidia-kernel/lib/modules/@KERNEL_VERSION@/updates/dkms"

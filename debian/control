@@ -2,7 +2,7 @@ Source: nvidia-kernel
 Section: non-free/kernel
 Priority: optional
 Maintainer: Vladimir Vinogradenko <vladimirv@ixsystems.com>
-Build-Depends: debhelper-compat (= 12), linux-headers-truenas-debug-amd64 (= @DEBUG_KERNEL_PACKAGE_VERSION@), linux-headers-truenas-production-amd64 (= @KERNEL_PACKAGE_VERSION@), nvidia-kernel-dkms (= @VERSION@)
+Build-Depends: debhelper-compat (= 12), linux-headers-truenas-production-amd64 (= @KERNEL_PACKAGE_VERSION@), nvidia-kernel-dkms (= @VERSION@)
 Homepage: https://www.nvidia.com
 
 Package: nvidia-kernel

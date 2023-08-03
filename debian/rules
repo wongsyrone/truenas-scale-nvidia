@@ -7,8 +7,5 @@ export DH_VERBOSE = 1
 override_dh_install:
 	dh_install
 	dkms install -m nvidia-current -v @VERSION_SHORT@ -k @KERNEL_VERSION@
-	dkms install -m nvidia-current -v @VERSION_SHORT@ -k @DEBUG_KERNEL_VERSION@
 	mkdir -p "debian/nvidia-kernel/lib/modules/@KERNEL_VERSION@/updates/dkms"
-	mkdir -p "debian/nvidia-kernel/lib/modules/@DEBUG_KERNEL_VERSION@/updates/dkms"
 	cp "/lib/modules/@KERNEL_VERSION@/updates/dkms/"nvidia-* "debian/nvidia-kernel/lib/modules/@KERNEL_VERSION@/updates/dkms"
-	cp "/lib/modules/@DEBUG_KERNEL_VERSION@/updates/dkms/"nvidia-* "debian/nvidia-kernel/lib/modules/@DEBUG_KERNEL_VERSION@/updates/dkms"
